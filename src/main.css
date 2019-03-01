@@ -1,0 +1,59 @@
+
+
+#pokedex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.pokemon {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding: 5px;
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.pokemon:hover {
+    transform: scale(1.1);
+}
+
+#pokemon-name {
+    text-transform: capitalize;
+    position: relative;
+    top: -25px;
+}
+
+.type_2 {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    align-self: flex-end;
+    position: relative;
+    top: 5px;
+    right: 5px;
+}
+
+.pokemon img {
+    width: 80px;
+    position: relative;
+    bottom: 15px;
+}
+
+.stats {
+    position: relative;
+    top: 10px;
+    background-color: rgba(255, 255, 255, .2);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
