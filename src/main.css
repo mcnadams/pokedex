@@ -1,4 +1,7 @@
-
+select {
+    padding: 10px;
+    margin: 20px 5px;
+}
 
 #pokedex-container {
     display: flex;
