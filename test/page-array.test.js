@@ -1,13 +1,7 @@
-
+import pageArray from '../src/page-array.js';
 const test = QUnit.test;
 
 QUnit.module('page array');
-
-function pageArray(pages, pagingOptions) {
-    const startIndex = (pagingOptions.page - 1) * pagingOptions.perPage;
-    const endIndex = startIndex + pagingOptions.perPage;
-    return pages.slice(startIndex, endIndex);
-}
 
 const pages = [
     'one',
