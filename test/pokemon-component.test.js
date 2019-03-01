@@ -24,7 +24,7 @@ function makeHtmlTemplate(pokemon) {
 }
 
 
-test('make html template for pokemon', assert => {
+test('make html template for bulbasaur pokemon', assert => {
 
     const pokemon = {
         'pokemon': 'bulbasaur',
@@ -77,4 +77,57 @@ test('make html template for pokemon', assert => {
 
     assert.htmlEqual(result, expected);
 
+});
+
+test('make template for squirtle', assert => {
+    const pokemon = {
+        'pokemon': 'squirtle',
+        'id': 10,
+        'species_id': 7,
+        'height': 5,
+        'weight': 90,
+        'base_experience': 63,
+        'type_1': 'water',
+        'type_2': 'NA',
+        'attack': 48,
+        'defense': 65,
+        'hp': 44,
+        'special_attack': 50,
+        'special_defense': 64,
+        'speed': 43,
+        'ability_1': 'torrent',
+        'ability_2': 'NA',
+        'ability_hidden': 'rain-dish',
+        'color_1': '#6890F0',
+        'color_2': 'NA',
+        'color_f': 'NA',
+        'egg_group_1': 'monster',
+        'egg_group_2': 'water1',
+        'url_image': 'http://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png',
+        'generation_id': 1,
+        'evolves_from_species_id': 'NA',
+        'evolution_chain_id': 3,
+        'shape_id': 6,
+        'shape': 'upright',
+        'pokebase': 'squirtle',
+        'pokedex': 'http://www.pokemon.com/us/pokedex/squirtle'
+    };
+    const expected = /* html */ `
+        <a href="http://www.pokemon.com/us/pokedex/squirtle" class="pokemon-container">
+            <div class="pokemon water" style="background-color: #6890F0">
+                <div class="type_2" style="background-color: NA"></div>
+                <h3 id="pokemon-name">squirtle</h3>
+                <img src="http://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png" alt="pokemon image">
+                <div class="stats">
+                    <span id="attack">A: 48</span>
+                    <span id="defense">D: 65</span>
+                    <span id="hp">HP: 44</span>
+                </div>
+            </div>
+        </a>
+    `;
+
+    const result = makeHtmlTemplate(pokemon);
+
+    assert.htmlEqual(result, expected);
 });
