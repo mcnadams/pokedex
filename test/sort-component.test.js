@@ -1,69 +1,56 @@
-
+import sortArray from '../src/sort-array.js';
 const test = QUnit.test;
 
-QUnit.module("sort component");
-
-function sortArray(array, sortChoice) {
-    const sortBy = sortChoice.property;
-    return array.sort((a, b) => {
-        if(a[sortBy] === b[sortBy]) {
-            return 0;
-        }
-        if(a[sortBy] > b[sortBy]) {
-            return 1;
-        }
-        return -1;
-    });
-}
+QUnit.module('sort component');
 
 const testData = [
     {
-        name: "Barry",
+        name: 'Barry',
         age: 15,
-        location: "Window"
+        location: 'Window'
     },
     {
-        name: "Leland",
+        name: 'Leland',
         age: 8,
-        location: "Trackers"
+        location: 'Trackers'
     },
     {
-        name: "Magnolia",
+        name: 'Magnolia',
         age: 5,
-        location: "Preschool"
+        location: 'Preschool'
     },
     {
-        name: "Bonnie",
+        name: 'Bonnie',
         age: 33,
-        location: "Alchemy"
+        location: 'Alchemy'
     }
 ];
 
 test('returns array sorted by name', assert => {
     const expected = [
         {
-            name: "Barry",
+            name: 'Barry',
             age: 15,
-            location: "Window"
+            location: 'Window'
         },
         {
-            name: "Bonnie",
+            name: 'Bonnie',
             age: 33,
-            location: "Alchemy"
+            location: 'Alchemy'
         },
         {
-            name: "Leland",
+            name: 'Leland',
             age: 8,
-            location: "Trackers"
+            location: 'Trackers'
         },
         {
-            name: "Magnolia",
+            name: 'Magnolia',
             age: 5,
-            location: "Preschool"
+            location: 'Preschool'
         }
     ];
     const sortOptions = {
-        property: "name"
+        property: 'name'
     };
 
     const result = sortArray(testData, sortOptions);
@@ -74,28 +61,28 @@ test('returns array sorted by name', assert => {
 test('returns array sorted by age', assert => {
     const expected = [
         {
-            name: "Magnolia",
+            name: 'Magnolia',
             age: 5,
-            location: "Preschool"
+            location: 'Preschool'
         },
         {
-            name: "Leland",
+            name: 'Leland',
             age: 8,
-            location: "Trackers"
+            location: 'Trackers'
         },
         {
-            name: "Barry",
+            name: 'Barry',
             age: 15,
-            location: "Window"
+            location: 'Window'
         },
         {
-            name: "Bonnie",
+            name: 'Bonnie',
             age: 33,
-            location: "Alchemy"
+            location: 'Alchemy'
         }
     ];
     const sortOptions = {
-        property: "age"
+        property: 'age'
     };
 
     const result = sortArray(testData, sortOptions);
@@ -106,28 +93,28 @@ test('returns array sorted by age', assert => {
 test('returns array sorted by location', assert => {
     const expected = [
         {
-            name: "Bonnie",
+            name: 'Bonnie',
             age: 33,
-            location: "Alchemy"
+            location: 'Alchemy'
         },
         {
-            name: "Magnolia",
+            name: 'Magnolia',
             age: 5,
-            location: "Preschool"
+            location: 'Preschool'
         },
         {
-            name: "Leland",
+            name: 'Leland',
             age: 8,
-            location: "Trackers"
+            location: 'Trackers'
         },
         {
-            name: "Barry",
+            name: 'Barry',
             age: 15,
-            location: "Window"
+            location: 'Window'
         }
     ];
     const sortOptions = {
-        property: "location"
+        property: 'location'
     };
 
     const result = sortArray(testData, sortOptions);

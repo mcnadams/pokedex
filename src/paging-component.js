@@ -3,7 +3,7 @@ const currentPageDisplay = document.getElementById('current-page');
 const totalPagesDisplay = document.getElementById('total-pages');
 const nextButton = document.getElementById('next-page');
 
-const PER_PAGE = 20;
+const PER_PAGE = 4;
 
 export default function loadPaging(totalPokemon, callback) {
     let currentPage = 1;
